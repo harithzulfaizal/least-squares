@@ -31,6 +31,8 @@ for i in range(order+1):
     coeff.append(c(f, phi2, a, b))
 
 print(coeff)
-plt.plot(xlin, func(xlin))
-plt.plot(xlin, y(order,  xlin, coeff), '--')
+plt.plot(xlin, func(xlin), label=r'$\sin\,{\pi x}$')
+plt.plot(xlin, y(order,  xlin, coeff), '--', label=r'Approximation')
+plt.legend()
+plt.title('Least squares function approximation of $\sin\,{\pi x}$')
 plt.show()
